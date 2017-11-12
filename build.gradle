@@ -29,5 +29,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("com.consol.citrus:citrus-simulator-starter:1.0.0")
+    compile("com.consol.citrus:citrus-simulator-ui:1.0.0")
     testCompile("junit:junit")
 }

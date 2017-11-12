@@ -20,7 +20,7 @@ public class MemberValidation extends AbstractSimulatorScenario {
                         "<dateofBirth>@ignore@</dateofBirth>" +
                         "<countryCode>@ignore@</countryCode>" +
                      "</membership>")
-            .extractFromPayload("/membership/membershipnumber", "membershipNumbner")
+            .extractFromPayload("/membership/membershipnumber", "membershipNumber")
             .extractFromPayload("/membership/dateofBirth", "dateofBirth")
             .extractFromPayload("/membership/countryCode", "countryCode");
 
@@ -30,7 +30,7 @@ public class MemberValidation extends AbstractSimulatorScenario {
             .response(HttpStatus.OK)
             .payload("<Members>" +
             			"<member>" +
-                        	"<MembershipNumber>${membershipNumbner}</MembershipNumber>" +
+                        	"<MembershipNumber>${membershipNumber}</MembershipNumber>" +
                         	"<ValidationStatus>true</ValidationStatus>" +
                         	"<MembershipActivationStatus>ACTIVE</MembershipActivationStatus>" +
                         	"<MemberType>GOLD</MemberType>" +
