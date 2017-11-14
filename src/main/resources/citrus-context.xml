@@ -8,7 +8,28 @@
        http://www.citrusframework.org/schema/config http://www.citrusframework.org/schema/config/citrus-config.xsd">
 
 
-  <citrus-http:client id="simulatorClient" request-url="https://REST-ADCloud.informaticadaas.com/adcloud/verifyaddress" timeout="5000"/>
-  <citrus-http:client id="hybrisClient" request-url="http://localhost:8080" charset="UTF-8" timeout="60000"/>
+<bean id="httpClient" class="com.consol.citrus.simulator.http.CustomHttpClientFactory"/>
+<bean id="sslFactory" class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+    <constructor-arg ref="httpClient"/>
+</bean>
+
+  <citrus-http:client 
+    id="hybrisClient" 
+    request-url="http://localhost:8080" 
+    charset="UTF-8" 
+    timeout="60000"/>
+
+  <citrus-http:client
+      id="addressDoctorURL"
+      request-url="https://REST-ADCloud.informaticadaas.com/adcloud/verifyaddress"
+      request-factory="sslFactory"
+      timeout="5000"/>
+
+  <citrus-http:client
+      id="membershipURL"
+      request-url="https://200.57.92.110/eCommerceServices/service/memberShipValidation"
+      timeout="5000"/>
+      
 
 </beans>
+

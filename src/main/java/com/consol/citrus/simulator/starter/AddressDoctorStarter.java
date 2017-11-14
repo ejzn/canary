@@ -14,32 +14,32 @@ import java.util.*;
 public class AddressDoctorStarter extends AbstractScenarioStarter {
 
     @Autowired
-    private HttpClient simulatorClient;
+    private HttpClient addressDoctorURL;
 	
 	@Override
     public void run(ScenarioDesigner scenario) {
-        scenario.echo("AddressDoctorStarter starter was executed!");
-
         scenario
             .http()
-            .client(simulatorClient)
+            .client(addressDoctorURL)
             .send()
             .post()
             .contentType("application/json")
             .payload("{ " +
-                    "login: \"c_ejohnsonr@costco.com\"," +
-                "    password: \"Tester!234\", " +
-                "    parameters: {ProcessMode: \"INTERACTIVE\"}, " +
+                    "login: \"165317\"," +
+                "    password: \"%Gz@$5ua\", " +
+                "    parameters: { " + 
+                "       ProcessMode: \"${mode}\", " +
+                "       ValidationParameters : { RangesToExpand: \"ALL\", MaxResultCount: \"30\"} " +
+                "    }," +
                 "    addresses: " +
                 "       [{ " +
                 "         FormattedAddress: [\"${street}\", \"${city}\", \"${postcode}\"], " +
                 "         Country: [\"${country}\"] " +
                 "      }] " +
                 "}");
-            //.payload("login=123456&password=Password1&street=${street}&Locality=${city}&postalcode=${postcode}&country=${country}");
 
          scenario
-            .http().client(simulatorClient)
+            .http().client(addressDoctorURL)
             .receive()
             .response(HttpStatus.OK);
     }
@@ -52,9 +52,13 @@ public class AddressDoctorStarter extends AbstractScenarioStarter {
         //Pkwy&Locality=Cary&province=NC&postalcode=27513&country=usa
         // greeting (text area)
         scenarioParameter.add(new ScenarioParameterBuilder()
+                .name("mode")
+                .label("mode")
+                .textbox()
+                .build());
+        scenarioParameter.add(new ScenarioParameterBuilder()
                 .name("street")
                 .label("street")
-                .required()
                 .textbox()
                 .build());
         scenarioParameter.add(new ScenarioParameterBuilder()
@@ -65,7 +69,6 @@ public class AddressDoctorStarter extends AbstractScenarioStarter {
         scenarioParameter.add(new ScenarioParameterBuilder()
                 .name("postcode")
                 .label("postcode")
-                .required()
                 .textbox()
                 .build());
         scenarioParameter.add(new ScenarioParameterBuilder()
