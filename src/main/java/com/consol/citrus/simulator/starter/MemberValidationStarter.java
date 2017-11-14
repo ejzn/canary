@@ -1,5 +1,7 @@
 package com.consol.citrus.simulator.starter;
 
+import com.consol.citrus.http.client.HttpClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.consol.citrus.simulator.model.ScenarioParameter;
 import com.consol.citrus.simulator.model.ScenarioParameterBuilder;
 import com.consol.citrus.simulator.scenario.*;
@@ -10,9 +12,18 @@ import java.util.List;
 @Starter("MemberValidationStarter")
 public class MemberValidationStarter extends AbstractScenarioStarter {
 
+    // @Autowired
+    // private HttpClient hybrisClient;
+
     @Override
-    public void run(ScenarioRunner scenario) {
-        scenario.echo("${payload}");
+    public void run(ScenarioDesigner scenario) {
+        
+        scenario.http()
+                .client("http://localhost:8080")
+                .send()
+                .post("/services/rest/membership/validation")
+                .contentType("application/xml")
+                .payload("${payload}");
     }
 
     @Override
