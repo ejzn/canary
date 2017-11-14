@@ -8,10 +8,7 @@
        http://www.citrusframework.org/schema/config http://www.citrusframework.org/schema/config/citrus-config.xsd">
 
 
-  <!-- Test Http REST client -->
-  <citrus-http:client
-      id="simulatorClient"
-      request-url="https://REST-ADCloud.informaticadaas.com/adcloud/verifyaddress"
-      timeout="5000"/>
+  <citrus-http:client id="simulatorClient" request-url="https://REST-ADCloud.informaticadaas.com/adcloud/verifyaddress" timeout="5000"/>
+  <citrus-http:client id="hybrisClient" request-url="http://localhost:8080" charset="UTF-8" timeout="60000"/>
 
 </beans>

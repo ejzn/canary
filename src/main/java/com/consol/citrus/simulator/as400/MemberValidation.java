@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Scenario("MemberValidation")
+@Scenario("MEMBER_VALIDATION")
 @RequestMapping(value = "/services/rest/membership/validation", method = RequestMethod.POST)
 public class MemberValidation extends AbstractSimulatorScenario {
 
