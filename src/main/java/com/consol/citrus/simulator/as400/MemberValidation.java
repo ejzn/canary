@@ -11,18 +11,22 @@ public class MemberValidation extends AbstractSimulatorScenario {
 
     @Override
     public void run(ScenarioDesigner scenario) {
+        scenario.description("Membership Validation on the AS400");
+
         scenario
             .http()
             .receive()
             .post()
             .payload("<membership>" +
-                        "<membershipnumber>@ignore@</membershipnumber>" +
+                        "<membershipnumber>@assertThat(anyOf(equalTo(123456789), equalTo(999999999), equalTo(888888888), equalTo(777777777), equalTo(666666666), equalTo(555555555)))@</membershipnumber>" +
                         "<dateofBirth>@ignore@</dateofBirth>" +
                         "<countryCode>@ignore@</countryCode>" +
                      "</membership>")
             .extractFromPayload("/membership/membershipnumber", "membershipNumber")
             .extractFromPayload("/membership/dateofBirth", "dateofBirth")
             .extractFromPayload("/membership/countryCode", "countryCode");
+        
+        
 
         scenario
             .http()
@@ -36,7 +40,7 @@ public class MemberValidation extends AbstractSimulatorScenario {
                         	"<MemberType>GOLD</MemberType>" +
                         	"<MemberCardType>PRIMARY</MemberCardType>" +
                         	"<ExpiryDate>20190109</ExpiryDate>" +
-                        	"<DateOfBirth>dateofBirth</DateOfBirth>" +
+                        	"<DateOfBirth>${dateofBirth}</DateOfBirth>" +
                         	"<Gender>MALE</Gender>" +
                         "</member>" +
                      "</Members>");

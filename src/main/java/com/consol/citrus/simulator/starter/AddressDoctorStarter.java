@@ -14,7 +14,7 @@ import java.util.*;
 public class AddressDoctorStarter extends AbstractScenarioStarter {
 
     @Autowired
-    private HttpClient httpClient;
+    private HttpClient simulatorClient;
 	
 	@Override
     public void run(ScenarioDesigner scenario) {
@@ -22,7 +22,7 @@ public class AddressDoctorStarter extends AbstractScenarioStarter {
 
         scenario
             .http()
-            .client(httpClient)
+            .client(simulatorClient)
             .send()
             .post()
             .contentType("application/json")
@@ -39,7 +39,7 @@ public class AddressDoctorStarter extends AbstractScenarioStarter {
             //.payload("login=123456&password=Password1&street=${street}&Locality=${city}&postalcode=${postcode}&country=${country}");
 
          scenario
-            .http().client(httpClient)
+            .http().client(simulatorClient)
             .receive()
             .response(HttpStatus.OK);
     }

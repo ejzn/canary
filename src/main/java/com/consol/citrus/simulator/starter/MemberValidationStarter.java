@@ -23,21 +23,36 @@ public class MemberValidationStarter extends AbstractScenarioStarter {
                 .send()
                 .post("/services/rest/membership/validation")
                 .contentType("application/xml")
-                .payload("${payload}");
+                .payload("<membership>" +
+                            "<membershipnumber>${membershipnumber}</membershipnumber>" +
+                            "<dateofBirth>${dateofBirth}</dateofBirth>" +
+                            "<countryCode>${countryCode}</countryCode>" +
+                        "</membership>");
     }
 
     @Override
     public List<ScenarioParameter> getScenarioParameters() {
         List<ScenarioParameter> scenarioParameter = new ArrayList<>();
 
-        // greeting (text area)
+        // Mandatory Fields
         scenarioParameter.add(new ScenarioParameterBuilder()
-                .name("payload")
-                .label("Payload")
-                .required()
-                .textarea()
-                .value("XML goes here")
-                .build());
+            .name("membershipnumber")
+            .label("Membership Number")
+            .required()
+            .textbox()
+            .build());
+        scenarioParameter.add(new ScenarioParameterBuilder()
+            .name("dateofBirth")
+            .label("Date of Birth")
+            .required()
+            .textbox()
+            .build());
+        scenarioParameter.add(new ScenarioParameterBuilder()
+            .name("countryCode")
+            .label("Country Code")
+            .required()
+            .textbox()
+            .build());
 
         return scenarioParameter;
     }
