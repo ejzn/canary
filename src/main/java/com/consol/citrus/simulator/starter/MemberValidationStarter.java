@@ -28,6 +28,11 @@ public class MemberValidationStarter extends AbstractScenarioStarter {
                             "<dateofBirth>${dateofBirth}</dateofBirth>" +
                             "<countryCode>${countryCode}</countryCode>" +
                         "</membership>");
+        
+        scenario.http()
+                .client(hybrisClient)
+                .receive()
+                .response(HttpStatus.OK);
     }
 
     @Override

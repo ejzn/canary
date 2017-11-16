@@ -26,8 +26,6 @@ public class MemberValidation extends AbstractSimulatorScenario {
             .extractFromPayload("/membership/dateofBirth", "dateofBirth")
             .extractFromPayload("/membership/countryCode", "countryCode");
         
-        
-
         scenario
             .http()
             .send()
