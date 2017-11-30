@@ -1,5 +1,5 @@
 {
-  "projectHome" : "canary/tests",
+  "projectHome" : "/Users/erikjohnson/Projects/canary/tests",
   "name" : "canary",
   "description" : "",
   "version" : "1.0.0-SNAPSHOT",
@@ -10,8 +10,8 @@
     "springJavaConfig" : "com.consol.citrus.CitrusEndpointConfig",
     "javaSrcDirectory" : "src/test/java/",
     "xmlSrcDirectory" : "src/test/resources/",
-    "javaFilePattern" : "/**/*Test.java,/**/*IT.java",
-    "xmlFilePattern" : "/**/*Test.xml,/**/*IT.xml",
+    "javaFilePattern" : "/**/*Test.java,/**/*.java",
+    "xmlFilePattern" : "/**/*Test.xml,/**/*.xml",
     "useConnector" : true,
     "connectorActive" : true,
     "tabSize" : 2,

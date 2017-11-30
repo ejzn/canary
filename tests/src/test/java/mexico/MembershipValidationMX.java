@@ -22,7 +22,7 @@ public class MembershipValidationMX extends TestNGCitrusTestDesigner {
       public void httpAction() {
             http().client(membershipValidationMX)
                   .send()
-                  .post("/services/rest/membership/validation")
+                  .post()
                   .payload("<membership>" +
                               "<membershipnumber>900018501845</membershipnumber>" +
                               "<dateofBirth>19660210</dateofBirth>" +

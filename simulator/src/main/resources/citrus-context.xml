@@ -28,6 +28,7 @@
   <citrus-http:client
       id="membershipURL"
       request-url="https://200.57.92.110/eCommerceServices/service/memberShipValidation"
+      request-factory="sslFactory"
       timeout="5000"/>
       
 
