@@ -1,68 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="canary.MembershipValidationMX" time="13.725" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="canary.MembershipValidationMX" time="133.747" tests="1" errors="0" skipped="0" failures="1">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="25.144-b01"/>
-    <property name="gopherProxySet" value="false"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.151-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/erikjohnson/Projects/canary/tests"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/erikjohnson/canary/tests"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="CA"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/erikjohnson/Projects/canary/tests"/>
-    <property name="java.runtime.version" value="1.8.0_144-b01"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/endorsed"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/cn/3hbf2d_d1gq8wdzv3l_9cr240000gn/T/"/>
+    <property name="user.dir" value="/home/erikjohnson/canary/tests"/>
+    <property name="java.runtime.version" value="1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.5.2/libexec/bin/m2.conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/erikjohnson/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/usr/local/Cellar/maven/3.5.2/libexec/conf"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.6"/>
-    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.5.2/libexec/lib/jansi-native"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/erikjohnson"/>
-    <property name="user.timezone" value="America/Vancouver"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
-    <property name="java.specification.version" value="1.8"/>
+    <property name="os.version" value="4.4.0-98-generic"/>
+    <property name="user.home" value="/home/erikjohnson"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="user.name" value="erikjohnson"/>
-    <property name="java.class.path" value="/usr/local/Cellar/maven/3.5.2/libexec/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="it.test" value="MembershipValidationMX#httpAction"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher compile integration-test -Dit.test=MembershipValidationMX#httpAction"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_144"/>
-    <property name="java.ext.dirs" value="/Users/erikjohnson/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/usr/local/Cellar/maven/3.5.2/libexec"/>
+    <property name="maven.home" value="/usr/share/maven"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="httpAction" classname="canary.MembershipValidationMX" time="2.183"/>
+  <testcase name="httpAction" classname="canary.MembershipValidationMX" time="127.725">
+    <failure message="Test case failed" type="com.consol.citrus.exceptions.TestCaseFailedException">com.consol.citrus.exceptions.TestCaseFailedException: Test case failed
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://200.57.92.110/eCommerceServices/service/memberShipValidation": Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+</failure>
+    <system-out><![CDATA[03:11:03,557 INFO         citrus.Citrus| Unable to locate Citrus application properties
+03:11:03,632 INFO  BeanDefinitionReader| Loading XML bean definitions from URL [file:/home/erikjohnson/canary/tests/target/test-classes/citrus-context.xml]
+03:11:04,132 DEBUG BeanDefinitionReader| Loaded 16 bean definitions from location pattern [classpath*:citrus-context.xml]
+03:11:04,944 DEBUG .XsdSchemaRepository| Loading XSD schema resource citrus-http-message.xsd
+03:11:07,035 WARN  etPushEventsListener| Failed to connect to citrus-admin connector: 'http://localhost:8080/api/connector/status' - disabling citrus-admin connector features
+03:11:07,662 INFO         citrus.Citrus| 
+03:11:07,663 INFO         citrus.Citrus| ------------------------------------------------------------------------
+03:11:07,663 INFO         citrus.Citrus|        .__  __                       
+03:11:07,663 INFO         citrus.Citrus|   ____ |__|/  |________ __ __  ______
+03:11:07,663 INFO         citrus.Citrus| _/ ___\|  \   __\_  __ \  |  \/  ___/
+03:11:07,663 INFO         citrus.Citrus| \  \___|  ||  |  |  | \/  |  /\___ \ 
+03:11:07,664 INFO         citrus.Citrus|  \___  >__||__|  |__|  |____//____  >
+03:11:07,664 INFO         citrus.Citrus|      \/                           \/
+03:11:07,664 INFO         citrus.Citrus| 
+03:11:07,664 INFO         citrus.Citrus| C I T R U S  T E S T S  2.7.2
+03:11:07,664 INFO         citrus.Citrus| 
+03:11:07,665 INFO         citrus.Citrus| ------------------------------------------------------------------------
+03:11:07,665 DEBUG        citrus.Citrus| BEFORE TEST SUITE
+03:11:07,665 INFO         citrus.Citrus| 
+03:11:07,665 INFO         citrus.Citrus| 
+03:11:07,666 INFO         citrus.Citrus| BEFORE TEST SUITE: SUCCESS
+03:11:07,666 INFO         citrus.Citrus| ------------------------------------------------------------------------
+03:11:07,666 INFO         citrus.Citrus| 
+03:11:07,690 DEBUG t.TestContextFactory| Created new test context - using global variables: '{project.name=Costco Canary Tests}'
+03:11:07,719 INFO         citrus.Citrus| 
+03:11:07,719 INFO         citrus.Citrus| ------------------------------------------------------------------------
+03:11:07,720 DEBUG        citrus.Citrus| STARTING TEST MembershipValidationTest.httpAction <canary>
+03:11:07,720 INFO         citrus.Citrus| 
+03:11:07,755 DEBUG      citrus.TestCase| Initializing test case
+03:11:07,755 DEBUG      citrus.TestCase| Global variables:
+03:11:07,755 DEBUG      citrus.TestCase| project.name = Costco Canary Tests
+03:11:07,757 DEBUG  context.TestContext| Setting variable: citrus.test.name with value: 'MembershipValidationTest.httpAction'
+03:11:07,764 DEBUG  context.TestContext| Setting variable: citrus.test.package with value: 'canary'
+03:11:07,765 INFO         citrus.Citrus| 
+03:11:07,765 DEBUG        citrus.Citrus| TEST STEP 1/2: send
+03:11:07,787 DEBUG ltCorrelationManager| Saving correlation key for 'citrus_message_correlator_membershipValidationMX'
+03:11:07,787 DEBUG  context.TestContext| Setting variable: citrus_message_correlator_membershipValidationMX with value: 'citrus_message_id = '1a5a3747-1763-4044-a0c8-be5662ce69c7''
+03:11:07,788 DEBUG    client.HttpClient| Sending HTTP message to: 'https://200.57.92.110/eCommerceServices/service/memberShipValidation'
+03:11:07,789 DEBUG    client.HttpClient| Message to send:
+<membership><membershipnumber>900018501845</membershipnumber><dateofBirth>19660210</dateofBirth><countryCode>MX</countryCode></membership>
+03:11:07,952 DEBUG ingClientInterceptor| Sending Http request message
+03:11:07,954 DEBUG   Logger.Message_OUT| POST https://200.57.92.110/eCommerceServices/service/memberShipValidation
+Accept:application/xml, */*
+Content-Type:application/xml
+Content-Length:138
+Accept-Charset:big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp
+
+<membership><membershipnumber>900018501845</membershipnumber><dateofBirth>19660210</dateofBirth><countryCode>MX</countryCode></membership>
+03:11:07,984 DEBUG ol.RequestAddCookies| CookieSpec selected: default
+03:11:08,003 DEBUG col.RequestAuthCache| Auth cache not set in the context
+03:11:08,008 DEBUG entConnectionManager| Connection request: [route: {s}->https://200.57.92.110:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+03:11:08,041 DEBUG entConnectionManager| Connection leased: [id: 0][route: {s}->https://200.57.92.110:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+03:11:08,045 DEBUG chain.MainClientExec| Opening connection {s}->https://200.57.92.110:443
+03:11:08,049 DEBUG ntConnectionOperator| Connecting to /200.57.92.110:443
+03:11:08,049 DEBUG nectionSocketFactory| Connecting socket to /200.57.92.110:443 with timeout 0
+03:13:15,347 DEBUG HttpClientConnection| http-outgoing-0: Shutdown connection
+03:13:15,350 DEBUG chain.MainClientExec| Connection discarded
+03:13:15,351 DEBUG entConnectionManager| Connection released: [id: 0][route: {s}->https://200.57.92.110:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+03:13:15,359 INFO         citrus.Citrus| 
+03:13:15,362 ERROR        citrus.Citrus| TEST FAILED MembershipValidationTest.httpAction <canary> Nested exception is: 
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://200.57.92.110/eCommerceServices/service/memberShipValidation": Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:666)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:613)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:531)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:112)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:118)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:229)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:145)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:281)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:136)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:111)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:57)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:89)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:99)
+	at com.consol.citrus.http.interceptor.LoggingClientInterceptor.intercept(LoggingClientInterceptor.java:56)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:86)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:652)
+	... 40 more
+Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:339)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 59 more
+03:13:15,376 INFO         citrus.Citrus| ------------------------------------------------------------------------
+03:13:15,376 INFO         citrus.Citrus| 
+]]></system-out>
+  </testcase>
 </testsuite>

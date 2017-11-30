@@ -1,32 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="2195" started-at="2017-11-30T02:55:58Z" finished-at="2017-11-30T02:56:00Z">
+  <suite name="Surefire suite" duration-ms="127758" started-at="2017-11-30T03:11:07Z" finished-at="2017-11-30T03:13:15Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="2195" started-at="2017-11-30T02:55:58Z" finished-at="2017-11-30T02:56:00Z">
+    <test name="Surefire test" duration-ms="127758" started-at="2017-11-30T03:11:07Z" finished-at="2017-11-30T03:13:15Z">
       <class name="canary.MembershipValidationMX">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="beforeSuite" is-config="true" duration-ms="1078" started-at="2017-11-29T18:55:57Z" finished-at="2017-11-29T18:55:58Z">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="beforeSuite" is-config="true" duration-ms="4484" started-at="2017-11-30T03:11:03Z" finished-at="2017-11-30T03:11:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5c20ffa8]]>
+                <![CDATA[org.testng.TestRunner@3961a41a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="1" started-at="2017-11-29T18:55:58Z" finished-at="2017-11-29T18:55:58Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="1" started-at="2017-11-30T03:11:07Z" finished-at="2017-11-30T03:11:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2017-11-29T18:55:58Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-11-29T18:55:58Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2017-11-30T03:11:07Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-11-30T03:11:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-11-29T18:55:58Z" finished-at="2017-11-29T18:55:58Z">
+        <test-method status="FAIL" signature="httpAction()[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="httpAction" duration-ms="127699" started-at="2017-11-30T03:11:07Z" finished-at="2017-11-30T03:13:15Z">
+          <exception class="com.consol.citrus.exceptions.TestCaseFailedException">
+            <message>
+              <![CDATA[Test case failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.consol.citrus.exceptions.TestCaseFailedException: Test case failed
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:236)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:145)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:281)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:136)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:111)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:57)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://200.57.92.110/eCommerceServices/service/memberShipValidation": Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:666)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:613)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:531)
+	at com.consol.citrus.http.client.HttpClient.send(HttpClient.java:112)
+	at com.consol.citrus.actions.SendMessageAction.doExecute(SendMessageAction.java:118)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:229)
+	... 32 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 200.57.92.110:443 [/200.57.92.110] failed: Connection timed out (Connection timed out)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:89)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:99)
+	at com.consol.citrus.http.interceptor.LoggingClientInterceptor.intercept(LoggingClientInterceptor.java:56)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:86)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:652)
+	... 40 more
+Caused by: java.net.ConnectException: Connection timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:339)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 59 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.consol.citrus.exceptions.TestCaseFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpAction -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-11-30T03:11:07Z" finished-at="2017-11-30T03:11:07Z">
           <params>
             <param index="0">
               <value>
@@ -37,11 +126,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="httpAction()[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="httpAction" duration-ms="2183" started-at="2017-11-29T18:55:58Z" finished-at="2017-11-29T18:56:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- httpAction -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-11-29T18:56:00Z" finished-at="2017-11-29T18:56:00Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2017-11-30T03:13:15Z" finished-at="2017-11-30T03:13:15Z">
           <params>
             <param index="0">
               <value>
@@ -52,15 +137,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-11-29T18:56:00Z" finished-at="2017-11-29T18:56:00Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2017-11-30T03:13:15Z" finished-at="2017-11-30T03:13:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:canary.MembershipValidationMX@3eb7fc54]" name="afterSuite" is-config="true" duration-ms="15" started-at="2017-11-29T18:56:05Z" finished-at="2017-11-29T18:56:05Z">
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:canary.MembershipValidationMX@5be6e01c]" name="afterSuite" is-config="true" duration-ms="70" started-at="2017-11-30T03:13:15Z" finished-at="2017-11-30T03:13:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5c20ffa8]]>
+                <![CDATA[org.testng.TestRunner@3961a41a]]>
               </value>
             </param>
           </params>
