@@ -9,30 +9,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
 /**
- * This is a test of the AS400 Membership Validation
- *
- * @author Stephen
+ * This is a test of the AS400 Membership Validation on QA3 Mexico
+ * @author Stephen Richter
  */
 @Test
-public class MembershipValidationIT extends TestNGCitrusTestDesigner {
+public class MembershipValidationMX extends TestNGCitrusTestDesigner {
 
       @Autowired
-      private HttpClient hybrisClient;
+      private HttpClient membershipValidationMX;
 
       @CitrusTest(name = "MembershipValidationTest.httpAction")
       public void httpAction() {
-            http().client(hybrisClient)
+            http().client(membershipValidationMX)
                   .send()
                   .post("/services/rest/membership/validation")
                   .payload("<membership>" +
-                              "<membershipnumber>123456789</membershipnumber>" +
-                              "<dateofBirth>19910415</dateofBirth>" +
+                              "<membershipnumber>900018501845</membershipnumber>" +
+                              "<dateofBirth>19660210</dateofBirth>" +
                               "<countryCode>MX</countryCode>" +
                         "</membership>")
                   .contentType("application/xml")
                   .accept("application/xml, */*");
       
-            http().client(hybrisClient)
+            http().client(membershipValidationMX)
                   .receive()
                   .response(HttpStatus.OK);
       }

@@ -15,19 +15,35 @@
       http://www.citrusframework.org/schema/http/config http://www.citrusframework.org/schema/http/config/citrus-http-config.xsd
       http://www.citrusframework.org/schema/testcase http://www.citrusframework.org/schema/testcase/citrus-testcase.xsd">
 
+    <bean class="com.consol.citrus.admin.connector.WebSocketPushEventsListener" id="WebSocketPushEventsListener"/>
+
     <!-- Common settings -->
     <context:property-placeholder location="classpath:citrus.properties"/>
 
     <citrus:schema-repository id="schemaRepository"/>
 
     <citrus:global-variables>
-        <citrus:variable name="project.name" value="Citrus Integration Tests"/>
+        <citrus:variable name="project.name" value="Costco Canary Tests"/>
     </citrus:global-variables>
 
-    <citrus-http:client id="hybrisClient"
-         request-url="http://localhost:8081"
-         charset="UTF-8"
-         timeout="60000"/>
+    <citrus-http:client id="citrusSimulator"
+      request-url="http://localhost:8081"
+      timeout="10000"/>
 
-  <bean class="com.consol.citrus.admin.connector.WebSocketPushEventsListener" id="WebSocketPushEventsListener"/>
+    <citrus-http:client id="membershipValidationMX"
+      request-url="https://200.57.92.110/eCommerceServices/service/memberShipValidation"
+      timeout="5000"/>
+
+    <citrus-http:client id="membershipValidationKR"
+      request-url="http://210.217.135.83:8546/membervalidation/"
+      timeout="5000"/>
+
+    <citrus-http:client id="membershipValidationTW"
+      request-url="https://122.147.48.70/RESTfulWS/UserInfoService/membervalidation/"
+      timeout="5000"/>
+
+    <citrus-http:client id="membershipValidationUK"
+      request-url="https://members.costco.co.uk:10030/mbrvalinttst/mbc1000"
+      timeout="5000"/>
+
 </beans>
