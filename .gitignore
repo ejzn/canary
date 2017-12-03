@@ -1,3 +1,4 @@
 tests/target/
+tests/test-output/
 build/
 .gradle/

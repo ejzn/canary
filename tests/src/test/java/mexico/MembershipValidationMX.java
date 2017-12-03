@@ -7,32 +7,29 @@ import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
 import com.consol.citrus.http.client.HttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.core.io.ClassPathResource;
 
-/**
- * This is a test of the AS400 Membership Validation on QA3 Mexico
- * @author Stephen Richter
- */
 @Test
 public class MembershipValidationMX extends TestNGCitrusTestDesigner {
 
       @Autowired
-      private HttpClient membershipValidationMX;
+      private HttpClient citrusSimulator;
 
       @CitrusTest(name = "MembershipValidationTest.httpAction")
       public void httpAction() {
-            http().client(membershipValidationMX)
+            description("This is a test of the AS400 Membership Validation on QA3 Mexico.");
+            author("Stephen Richter");
+
+            http().client(citrusSimulator)
                   .send()
-                  .post()
-                  .payload("<membership>" +
-                              "<membershipnumber>900018501845</membershipnumber>" +
-                              "<dateofBirth>19660210</dateofBirth>" +
-                              "<countryCode>MX</countryCode>" +
-                        "</membership>")
+                  .post("/services/rest/membership/validation")
+                  .payload(new ClassPathResource("test_data/bailey_zeita.xml"))
                   .contentType("application/xml")
                   .accept("application/xml, */*");
       
-            http().client(membershipValidationMX)
+            http().client(citrusSimulator)
                   .receive()
-                  .response(HttpStatus.OK);
+                  .response(HttpStatus.OK)
+                  .contentType("application/xml");
       }
 }

@@ -18,13 +18,13 @@ public class MemberValidation extends AbstractSimulatorScenario {
             .receive()
             .post()
             .payload("<membership>" +
-                        "<membershipnumber>@assertThat(anyOf(equalTo(123456789), equalTo(999999999), equalTo(888888888), equalTo(777777777), equalTo(666666666), equalTo(555555555)))@</membershipnumber>" +
+                        "<membershipnumber>@assertThat(anyOf(equalTo(123456789), equalTo(999999999), equalTo(888888888), equalTo(777777777), equalTo(666666666), equalTo(555555555), equalTo(900021153935)))@</membershipnumber>" +
                         "<dateofBirth>@ignore@</dateofBirth>" +
+                        "<name>@ignore@</name>" +
                         "<countryCode>@ignore@</countryCode>" +
                      "</membership>")
             .extractFromPayload("/membership/membershipnumber", "membershipNumber")
-            .extractFromPayload("/membership/dateofBirth", "dateofBirth")
-            .extractFromPayload("/membership/countryCode", "countryCode");
+            .extractFromPayload("/membership/dateofBirth", "dateofBirth");
         
         scenario
             .http()
@@ -41,6 +41,7 @@ public class MemberValidation extends AbstractSimulatorScenario {
                         	"<DateOfBirth>${dateofBirth}</DateOfBirth>" +
                         	"<Gender>MALE</Gender>" +
                         "</member>" +
-                     "</Members>");
+                     "</Members>")
+            .contentType("application/xml");
     }
 }

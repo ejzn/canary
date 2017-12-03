@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:citrus="http://www.citrusframework.org/schema/config"
+       xmlns:citrus-http="http://www.citrusframework.org/schema/http/config"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.citrusframework.org/schema/http/config http://www.citrusframework.org/schema/http/config/citrus-http-config.xsd
+       http://www.citrusframework.org/schema/config http://www.citrusframework.org/schema/config/citrus-config.xsd">
+
+
+<bean id="httpClient" class="com.consol.citrus.simulator.http.CustomHttpClientFactory"/>
+<bean id="sslFactory" class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+    <constructor-arg ref="httpClient"/>
+</bean>
+
+  <citrus-http:client 
+    id="hybrisClient" 
+    request-url="http://localhost:8080" 
+    charset="UTF-8" 
+    timeout="60000"/>
+
+  <citrus-http:client
+      id="addressDoctorURL"
+      request-url="https://REST-ADCloud.informaticadaas.com/adcloud/verifyaddress"
+      request-factory="sslFactory"
+      timeout="5000"/>
+
+  <citrus-http:client
+      id="membershipURL"
+      request-url="https://200.57.92.110/eCommerceServices/service/memberShipValidation"
+      request-factory="sslFactory"
+      timeout="5000"/>
+      
+
+</beans>
+

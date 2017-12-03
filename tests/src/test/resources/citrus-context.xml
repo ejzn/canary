@@ -32,7 +32,7 @@
     </bean>
 
     <citrus-http:client id="citrusSimulator"
-      request-url="http://localhost:8081"
+      request-url="http://localhost:8080"
       timeout="10000"/>
 
     <citrus-http:client id="membershipValidationMX"
