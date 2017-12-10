@@ -1,0 +1,5 @@
+<nextMembershipNumber>
+  <countryCode>${countryCode}</countryCode>
+  <memberType>${memberType}</memberType>
+  <memberCardType>${memberCardType}</memberCardType>
+</nextMembershipNumber>

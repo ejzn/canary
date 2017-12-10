@@ -10,6 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.core.io.ClassPathResource;
 
+/**
+ * This is a Java DSL Citrus Integrtion Test to test the AS400 Membership Validation.
+ *
+ * @author Stephen Richter
+ */
 public class MembershipValidationIT extends TestNGCitrusTestDesigner {
 
       @Autowired

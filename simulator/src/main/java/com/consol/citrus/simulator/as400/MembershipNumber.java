@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Scenario("MEMBERSHIP_NUMBER")
-@RequestMapping(value = "/services/rest/membershipnumber/korea", method = RequestMethod.POST)
+@RequestMapping(value = "/services/rest/membership/nextMembershipNumber", method = RequestMethod.POST)
 public class MembershipNumber extends AbstractSimulatorScenario {
 
     @Override
@@ -18,11 +18,9 @@ public class MembershipNumber extends AbstractSimulatorScenario {
             .receive()
             .post()
             .payload("<nextMembershipNumber>" +
-                        "<countryCode>KR</countryCode>" +
-                        "<memberType>@ignore</memberType>" +
-                        "<memberCardType>@ignore</memberCardType>" +
-                        "<primaryMemberId>@ignore</primaryMemberId>" +
-                        "<referenceId>@ignore</referenceId>" + 
+                        "<countryCode>@ignore@</countryCode>" +
+                        "<memberType>@ignore@</memberType>" +
+                        "<memberCardType>@ignore@</memberCardType>" +
                      "</nextMembershipNumber>");
         
         scenario
@@ -32,7 +30,7 @@ public class MembershipNumber extends AbstractSimulatorScenario {
             .contentType("application/xml")
             .payload("<Member>" +
                         "<responseCode>0</responseCode>" +
-                        "<nextMembershipNumber>222222222</nextMembershipNumber>" +
+                        "<nextMembershipNumber>55556666</nextMembershipNumber>" +
                      "</Member>");
     }
 }

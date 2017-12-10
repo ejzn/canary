@@ -1,0 +1,44 @@
+<Members>
+  <Member>
+    <MembershipNumber>${membershipNumber}</MembershipNumber>
+    <ValidationStatus>true</ValidationStatus>
+    <MembershipActivationStatus>ACTIVE</MembershipActivationStatus>
+    <MemberType>GOLD</MemberType>
+    <ExecutiveNumber>false</ExecutiveNumber>
+    <MemberCardType>PRIMARY</MemberCardType>
+    <Name>
+      <LocalisedValue>
+        <Lang>en</Lang>
+        <Value>English name</Value>
+      </LocalisedValue>
+      <LocalisedValue>
+        <Lang>ko</Lang>
+        <Value>Korean name</Value>
+      </LocalisedValue>
+    </Name>
+    <ExpiryDate>201510</ExpiryDate>
+    <DateOfBirth>${dateofBirth}</DateOfBirth>
+    <Gender>MALE</Gender>
+    <Addresses>
+      <Address>
+        <Type>HOME</Type>
+        <AddressLine1>Home line 1</AddressLine1>
+        <AddressLine2>Home line 2</AddressLine2>
+        <AddressLine3>Home line 3</AddressLine3>
+        <AddressLine4>Home line 4</AddressLine4>
+        <AddressZipcode>HomeZipCode</AddressZipcode>
+        <PhoneNumber>123456789</PhoneNumber>
+      </Address>
+      <Address>
+        <Type>OFFICE</Type>
+        <AddressLine1>Office line 1</AddressLine1>
+        <AddressLine2>Office line 2</AddressLine2>
+        <AddressLine3>Office line 3</AddressLine3>
+        <AddressLine4>Office line 4</AddressLine4>
+        <AddressZipcode>OfficeZipCode</AddressZipcode>
+        <PhoneNumber>234567890</PhoneNumber>
+      </Address>
+    <Addresses>
+    <CellPhoneNumber>987654321</CellPhoneNumber>
+  <Member>
+</Members>
