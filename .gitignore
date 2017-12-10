@@ -1,4 +1,5 @@
 tests/target/
 tests/test-output/
+tests/canary/outgoing/*
 build/
 .gradle/
