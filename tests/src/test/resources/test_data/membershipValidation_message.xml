@@ -1,0 +1,6 @@
+<membership>
+  <membershipnumber>${membershipNumber}</membershipnumber>
+  <dateofBirth>${dateofBirth}</dateofBirth>
+  <name>${name}</name>
+  <countryCode>${countryCode}</countryCode>
+</membership>
